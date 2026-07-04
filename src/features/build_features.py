@@ -1,13 +1,6 @@
 import pandas as pd
 
 def build_features(df: pd.DataFrame) -> pd.DataFrame:
-    df = df.copy()
-
-    # normalize the categories
-    df = df.replace({
-        "No internet service": "No",
-        "No phone service": "No"
-    })
 
     # feature 1: Tenure Group
     df['tenure_group'] = pd.cut(
