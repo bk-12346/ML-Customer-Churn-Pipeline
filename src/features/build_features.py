@@ -12,7 +12,7 @@ def build_features(df: pd.DataFrame) -> pd.DataFrame:
     # feature 1: Tenure Group
     df['tenure_group'] = pd.cut(
         df['tenure'],
-        bins = [0, 12, 24, 48, 72],
+        bins = [-1, 12, 24, 48, 72],
         labels = ['new', 'short_term', 'mid-term', 'long-term']
     )
 
